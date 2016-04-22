@@ -1,0 +1,27 @@
+\subsubsection{Alpha}
+\begin{itemize}
+	\item Security
+		\begin{itemize}
+			\item The notification system does not require any form of authentication before returning information to the 							client, since the request is sent from the client-side this means any person whether they are a registered user 					or not can request data from the server.
+			\item The system does not make any provisions for unauthorised access to certain information, meaning any user can 						access information of any publication or group.
+			\item The system does not check for any suspicious behaviour, such as repeatedly responding to a request from the 						same user. Combined with the lack of multithreading, the system is very susceptible to a denial of services 						attack.
+		\end{itemize}
+	\item Auditability
+		\begin{itemize}
+			\item The system does not log any information about user actions, which makes it very difficult, if not impossible 						to locate the source of an error.
+		\end{itemize}
+	\item Performance
+		\begin{itemize}
+			\item The system does not make use of multithreading which means each request would have to be processed one-at-a-						time, which would cause the system to be very slow and unresponsive.
+			\item Due to the lack of multithreading as mention previously the system would be able to support only one request 						at a given time, let alone 100 as specified by the client.
+		\end{itemize}
+	\item Reliability
+		\begin{itemize}
+			\item Due to the previously mentioned factors e.g. the lack of multithreading, the lack of event logging, the 							susceptibility to denial of services attacks, it can be assumed that the system will experience significant down 				time if these problems are not taken care of.
+		\end{itemize}
+	\item Scalability
+		\begin{itemize}
+			\item The administrative scalability requirements specifies that the system must be able to accommodate up to 100 						simultaneous users, though 100 users can be logged in at a given time the system can only process the request of 				one at a time.
+			\item The load scalability requirements specify that an increase in concurrent users shall not degrade the systems 						response time to an extent noticeable by the user, this is thus not adhered to as for example, if 20 users make 					a notification request before you, you would have to wait for 20 request to be processed before your request is, 				leading to a definitely noticeable 2000\% increase in response time.
+		\end{itemize}
+\end{itemize}
