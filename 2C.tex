@@ -1,0 +1,33 @@
+\subsubsection{Bravo}
+\begin{itemize}
+	\item Maintainability
+		\begin{itemize}
+			\item Bravo has sub-dived the whole notification module into smaller more manageable sub modules allowing for individual testing. 
+			\item Each sub module can then be altered and tested before integrating into the final module allowing the system to be maintained at a constant stable version. New functionality can now be added via new submodules allowing for plug ability. 												
+		\end{itemize}
+	\item Intergrability
+		\begin{itemize}
+			\item  The system should be able to easily address future intergration requirements by providing access to its services using widely adopted public standards.	 
+			\item  There was no supplied unit tests. Unit test are critical to determine whether or not we can integrate it into a larger system.
+			\item  There is no way of installing the required packages. This degrades the quality of the integratability of the system as one has to manually figure out which packages to include in the system.
+		\end{itemize}
+	\item  Perfomance
+		\begin{itemize}
+			\item The Notifications module does not suffer from perfomance issues. The perfomance of the notifications module would rely on the network speed  and a stable connection to the database. 
+		\end{itemize}
+	\item Scalability
+		\begin{itemize}
+			\item The Notifications module allows multiple notifications to be sent concurently with no limit on the number of notifications to be sent at a time.  Furhermore, multiple users can use the function concurently because of the way the server can be set up.	
+		\end{itemize}
+	\item Auditability
+		\begin{itemize}
+			\item  The notifications module does not record information about the users notificatioons are sent to which makes it difficult to trace errors or problems when they occur on the system.								
+																
+		\end{itemize}
+		
+	\item Testebility
+		\begin{itemize}
+			\item  The Notifications class has been modularised and this should in principle, fascilitate its testebility since the use of modularisation helps in separating out functionalities and being able to focus on the individual fucntions.								
+																
+		\end{itemize}
+\end{itemize}
