@@ -1,0 +1,100 @@
+\subsubsection{Alpha}
+\subsubsection*{Send report}
+Send a report of the group to all of its members.
+\begin{enumerate}
+	\item Classes: 
+		\begin{itemize}
+			\item ReportNotificationRequest.java, NotificationRequest.java, RepeatRequest.java, Notification.java, Report.java, 					Schedules.java,Emailer.java, NotificationResponse.java, User.java.
+		\end{itemize}
+	\item Pre-condition(s) violated:
+		\begin{itemize}
+			\item The alpha team provides no pre-condition checks, any user can request any report regardless of whether they are 				a member of that particular group.
+		\end{itemize}
+	\item Post condition(s) violated: 
+		\begin{itemize}
+			\item A report may be returned to a user that is not a member of that particular group.
+		\end{itemize}
+	\item Data structure violations:
+		\begin{itemize}
+			\item The ReportNotificationRequest class does not extend the UserNotificationRequest class as specified in the 						specs, instead it extends the parent class NotificationRequest.
+			\item The ReportNotificationRequest class does not create an instance of the scheduler object, instead the scheduler 					class describes a stand-alone object that receives an object of type NotificationRequest as a parameter and 						generates the NotificationResponse object.
+			\item The scheduler class is used to generate the NotificationResponse object and initiate the email request, as 						appose to maintaining just the name, date and RepeatRequest object. 
+		\end{itemize}
+\end{enumerate}
+\newpage
+
+\subsubsection*{Send activity notification}
+Send notifications of activity on a paper to all of its authors.
+\begin{enumerate}
+	\item Classes: 
+		\begin{itemize}
+			\item ActivitiesNotificationRequest.java, NotificationRequest.java, RepeatRequest.java, Notification.java, 								Publication.java, Schedules.java, Emailer.java, NotificationResponse.java, User.java.
+		\end{itemize}
+	\item Pre-condition(s) violated: 
+		\begin{itemize}
+			\item The alpha team does not provide any pre-condition checks, any user can request notifications from any 							publication regardless of whether they are an author on that publication or not. 
+		\end{itemize}
+	\item Post condition(s) violated: 
+		\begin{itemize}
+			\item Users who are not authors of a particular publication may be notified of activity on that publication.
+		\end{itemize}
+	\item Data structure violations:
+	\begin{itemize}
+		\item The ActivitiesNotificationRequest class does not extend the UserNotificationRequest class as specified in the 					specs, instead it extends the parent class NotificationRequest.
+		\item The ActivitiesNotificationRequest class does not maintain an instance of the Publication object, instead it passes 				the individual values from the publication object as parameters.
+		\item The scheduler class is used to generate the NotificationResponse object and initiate the email request, whereas the 			specs specify that there should be no communication between the scheduler class and ActivitiesNotificationRequest 					class.
+	\end{itemize}
+\end{enumerate}
+\newpage
+
+\subsubsection*{Send reminder}
+Set by the user to send him/herself notifications.
+	\begin{enumerate}
+		\item Classes: 
+			\begin{itemize}
+				\item ReminderRequest.java, NotificationRequest.java, RepeatRequest.java, Notification.java, Schedules.java, 							Emailer.java, NotificationResponse.java, User.java.
+			\end{itemize}
+		\item Pre-condition(s) violated:
+			\begin{itemize}
+				\item The system does not place restriction as to whom may set a reminder, nor does it limit the reminders to a 						specific set of events, therefore the only pre-condition is that the user is a registered user of the system. 					A user can however only gain access to the ReminderRequest object if he/she were a registered user, thus any 						pre-condition checks would be redundant.
+			\end{itemize}
+		\item Post condition(s) violated:
+			\begin{itemize}
+				\item None 
+			\end{itemize}
+		\item Data structure violations:
+			\begin{itemize}
+				\item The ReminderRequest class does not extend the UserNotificationRequest class as specified in the specs, 							instead it extends the parent class NotificationRequest.
+				\item The scheduler class is used to generate the NotificationResponse object and initiate the email request, 							whereas the specs specify that there should be no communication between the scheduler class and 									ReminderRequest class.
+			\end{itemize}
+\end{enumerate}
+\newpage
+
+\subsubsection*{Send broadcast}
+Send notifications to multiple users.
+	\begin{enumerate}
+		\item Classes: 
+			\begin{itemize}
+				\item BroadcastNotificationRequest.java, NotificationRequest.java, RepeatRequest.java, Notification.java, 								Report.java, Schedules.java, Emailer.java, NotificationResponse.java, User.java.
+			\end{itemize}
+		\item Pre-condition(s) violated: 
+			\begin{itemize}
+				\item The alpha team does not provide any pre-condition checks, any user can request to broadcast a notification 						to any other user, regardless of whether or not they are an admin or group leader.
+				\item The system also allows the recipient users to be specified meaning that the broadcast need not be contained 					within a specific group of users.
+			\end{itemize}
+		\item Post condition(s) violated: 
+			\begin{itemize}
+				\item Any or all users may be notified even if those users are not part of some common group, with the lack of 							pre-condition checks, the broadcast system just becomes a method to spread spam and propaganda.
+			\end{itemize}
+		\item Data structure violations:
+			\begin{itemize}
+				\item The BroadcastNotificationRequest class does not create an instance of the scheduler object, instead the 							scheduler class describes a stand-alone object that receives an object of type NotificationRequest as a 							parameter and generates the NotificationResponse object.
+				\item The scheduler class is used to generate the NotificationResponse object and initiate the email request, as 						appose to maintaining just the name, date and RepeatRequest object. 
+			\end{itemize}
+\end{enumerate}
+\newpage
+
+\subsubsection*{Conclusion}
+Overall the alpha team attempted to implement the large majority of the functionality. For the most part little to no attention 
+have been given to comply with the pre conditions, and the team strained a bit from the domain model at some points, 
+however none of the short-comings will break the system, and  if properly integrated the system would achieve its intended goal.
