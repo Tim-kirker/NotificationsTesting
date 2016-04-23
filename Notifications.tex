@@ -74,6 +74,13 @@
 
 \section{Architecture compliance analysis}
 \subsection{Which aspects of the software architecture specification were adhered to}
+\subsubsection{Bravo}
+The Bravo team has adhered to the following software architecture specifications:
+\begin{itemize}
+	\item They used Java code to create and send notifications using SMTP commands. Although there are no Java-EE annotations in the code, this code will still work in Java-EE.
+	\item Their code is integrable as it is very easy to just call functions to request notifications sending.
+	\item Their code is easily maintainable and there are very little dependancies for their code.
+\end{itemize}
 
 
 \subsection{Which aspects of the software architecture specification were partially complied to, pointing out any short-comings with respect to the specification}
