@@ -1,0 +1,34 @@
+\subsubsection{alpha}
+\begin{itemize}
+	\item Maintainability
+		\begin{itemize}
+			\item Modularization of the system allows one to test and alter various components of the system without affecting others due to the loose coupling.
+		\end{itemize}
+	\item Scalability
+	\begin{itemize}
+		\item Most components of the notifications system are dynamic which allows for multiple users and so forth. There is no restriction on the number of users etc. 
+	\end{itemize}
+	\item Performance Requirements
+	\begin{itemize}
+		\item The notifications system has no performance issues and is solely dependent on the speed of the network.
+		\item The system however has not been set up for concurrent use.
+	\end{itemize}
+	\item Reliability
+	\begin{itemize}
+		\item The notifications system provides exception handling for errors to ensure the system does not crash on users.
+		\item Unit tests show the system working in an almost complete environment.
+	\end{itemize}	
+	\item Testability
+	\begin{itemize}
+		\item Unit tests are provided, they test all the various modules in the notification system. With the system being modularized, testability of each component is possible which assists when you are required to alter specific components (modules) without affecting the others.
+	\end{itemize}
+	\item Usability
+	\begin{itemize}
+		\item The notifications system follows a sequence of algorithms, each of which carrying out tasks to assist the users.
+	\end{itemize}
+	\item Integrability
+	\begin{itemize}
+		\item Unit tests were provided for the notification system.
+		\item Exceptions were put in place to handle errors and notify the users of the problem.
+	\end{itemize}
+\end{itemize}
