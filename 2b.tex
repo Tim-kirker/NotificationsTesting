@@ -1,0 +1,23 @@
+\subsubsection{Alpha}
+\begin{itemize}
+	\item Maintainability 
+		\begin{itemize}
+			\item The maintainability architectural requirement is that the system be easy to maintain in the future. Developers should find it easy to understand and interpret the code.
+			\item It is also a requirement that the technologies used be expected to be available in the future.
+			\item The notification sub-system partially meets the maintainability requirement because, the technologies used will be around for a long time and there is an extensive use of comments and Javac documentation that will allow the programmers to easily understand the code.
+			\item However, the maintainability requirements is not met because most of the code is tightly coupled therefore making it hard to make changes and expand the code.
+		\end{itemize}
+		\item Usability 
+		\begin{itemize}
+			\item The usability requirement of the system is that is it should be intuitive and easy to use.
+			\item Users with a literacy computer rate of an average first year students are able to use the system without any guidance or documentation. This can be interpreted specifically for the notifcation module to mean that the notifications sent out must use basic and easy to under stand language.
+			\item Adding to this, it was required to be provided in the three offical languages othe univeristy; English, Afrikaans and Sepedi.
+      \The usability requirement was partially met because there was only one language used, but basic language was used in all notification messages.
+    \end{itemize}
+    \item Deployability
+    \begin{itemize}
+      \item The deployability requirement for this system was that he system must be buildable from source and build scripts only and that it must be deployable on Linux servers on enviromnents that use different databases for persistance.
+      \item Another requirement was that the module be deployed as a docker package. 
+      \The deployment requirement for notifications was partially met because docker was used, however the code can be built source and build scripts only. It can also be deployed on Linux servers and persistance was not used that much therefore changing the database would not affect it.
+    \end{itemize}
+\end{itemize}
