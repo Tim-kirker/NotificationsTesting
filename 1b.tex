@@ -98,3 +98,42 @@ Send notifications to multiple users.
 Overall the alpha team attempted to implement the large majority of the functionality. For the most part little to no attention 
 have been given to comply with the pre conditions, and the team strained a bit from the domain model at some points, 
 however none of the short-comings will break the system, and  if properly integrated the system would achieve its intended goal.
+
+\subsubsection{Bravo short-comings of the implemented functionality}
+\subsubsection*{Files}
+\begin{itemize}
+	\item Notfications.java, Client.java
+\end{itemize}
+\subsubsection*{Data structure violations}
+	\begin{itemize}
+		\item There is only a single class: Notifications.
+		\item No encapsulation of messages was done.
+	\end{itemize}
+\subsubsection*{Send report}
+Send a report of the group to all of its members.
+\begin{enumerate}
+	\item Pre-condition(s) violated:
+	\begin{itemize}
+		\item The Bravo team provides no pre-condition checks, any user can request any report regardless of whether they are a member of that particular group.
+	\end{itemize}
+	\item Post condition(s) violated:
+	\begin{itemize}
+		\item No email is sent.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection*{Send activity notification}
+Send notifications of activity on a paper to all of its authors.\\
+This was not implemented by the Bravo team.
+
+\subsubsection*{Send reminder}
+Set by the user to send him/herself notifications.\\
+This was not implemented by the Bravo team. There is only a function with an empty body.
+
+\subsubsection*{Send broadcast}
+Send notifications to multiple users.\\
+This was not implemented by the Bravo team.
+
+\subsubsection*{Conclusion}
+The Bravo team did not implement much of the required functionality. There was a Client file that could send emails using input from the command line, but none of the functions within Notifications.java were called. There were only two classes Notifications and Client. No encapsulation was done for any of the requests.
+
